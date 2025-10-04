@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODO LIST</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <div class="mainDiv">
+    <h1>TODO-LIST</h1>
+    <div class="connect">
+    <input type="text" placeholder="Write to save" id="text" />
+    <button id="btn">CONNECT</button>
+    </div>
+    <div class="todoEle"></div>
+  </div>
+
+  <script>
+    let text = document.getElementById("text");
+    let todoList = document.querySelector(".todoEle");
+    let btn = document.getElementById("btn");
+
+    btn.addEventListener("click", () => {
+      addTodo();
+    });
+
+    function addTodo() {
+      if (text.value.trim() === "") return; 
+
+      let todoItem = document.createElement("div");
+      todoItem.classList.add("todo-item");
+
+      let todoText = document.createElement("span");
+      todoText.innerText = text.value;
+
+      let deleteBtn = document.createElement("button");
+      deleteBtn.innerHTML = "x";
+      deleteBtn.classList.add("delete-btn");
+
+      todoItem.append(todoText , deleteBtn);
+    
+      todoList.appendChild(todoItem);
+
+      text.value = "";
+
+          deleteBtn.addEventListener("click" , ()=>{
+          console.log(todoItem);
+        todoItem.remove();
+      
+      })
+    }
+
+
+  </script>
+</body>
+</html>
+
+
+
+
