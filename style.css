@@ -78,34 +78,3 @@
 
 
 
-/*
-
-
-body{
-    
-   height :100px; 
-   background-color: rgb(127, 236, 93);
-   font-family: Arial, sans-serif;
-   background: linear-gradient(to right, #74ebd5, #ACB6E5);
-   color: #333;
-    display: flex;
-    font-size: 19px;
-   justify-content: center;
-   align-items: center; 
-   height: 100vh; 
-
- 
-
-}
-
-.mainDiv{
-   
-    text-align: center;
-    width: 300px;
-
-   }
-
-   #text , #btn{
-    border-radius: 10px;
-    height: 30px;
-   }
